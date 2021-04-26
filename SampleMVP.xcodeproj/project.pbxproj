@@ -13,8 +13,11 @@
 		B2005F89262BF07400133A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2005F87262BF07400133A0D /* Main.storyboard */; };
 		B2005F8B262BF07800133A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2005F8A262BF07800133A0D /* Assets.xcassets */; };
 		B2005F8E262BF07800133A0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2005F8C262BF07800133A0D /* LaunchScreen.storyboard */; };
-		B2005F99262BF07800133A0D /* SampleMVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005F98262BF07800133A0D /* SampleMVPTests.swift */; };
-		B2005FA4262BF07800133A0D /* SampleMVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005FA3262BF07800133A0D /* SampleMVPUITests.swift */; };
+		B2005FCC262BF2E800133A0D /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005FCA262BF2E800133A0D /* RepoCell.swift */; };
+		B2005FCD262BF2E800133A0D /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2005FCB262BF2E800133A0D /* RepoCell.xib */; };
+		B2005FD8262C03C000133A0D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005FD7262C03C000133A0D /* Repository.swift */; };
+		B2005FDD262C053C00133A0D /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005FDC262C053C00133A0D /* GitHubAPI.swift */; };
+		B2005FE2262C0C7C00133A0D /* GitHubPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005FE1262C0C7C00133A0D /* GitHubPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B2005F7E262BF07400133A0D /* SampleMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2005F81262BF07400133A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2005F83262BF07400133A0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B2005F85262BF07400133A0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,12 +45,14 @@
 		B2005F8A262BF07800133A0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2005F8D262BF07800133A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2005F8F262BF07800133A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2005F94262BF07800133A0D /* SampleMVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleMVPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2005F98262BF07800133A0D /* SampleMVPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleMVPTests.swift; sourceTree = "<group>"; };
-		B2005F9A262BF07800133A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2005F9F262BF07800133A0D /* SampleMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleMVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2005FA3262BF07800133A0D /* SampleMVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleMVPUITests.swift; sourceTree = "<group>"; };
-		B2005FA5262BF07800133A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2005FCA262BF2E800133A0D /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepoCell.swift; path = VC/RepoCell.swift; sourceTree = "<group>"; };
+		B2005FCB262BF2E800133A0D /* RepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RepoCell.xib; path = VC/RepoCell.xib; sourceTree = "<group>"; };
+		B2005FD1262BF35B00133A0D /* SampleMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2005FD7262C03C000133A0D /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		B2005FDC262C053C00133A0D /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		B2005FE1262C0C7C00133A0D /* GitHubPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubPresenter.swift; sourceTree = "<group>"; };
+		B220FD942635DDC700DFB1E3 /* SampleMVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SampleMVPTests.xctest; path = "/Users/toya/Desktop/SampleMVP/SampleMVP/build/Debug-iphoneos/SampleMVPTests.xctest"; sourceTree = "<absolute>"; };
+		B220FD952635DDC700DFB1E3 /* SampleMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SampleMVPUITests.xctest; path = "/Users/toya/Desktop/SampleMVP/SampleMVP/build/Debug-iphoneos/SampleMVPUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,52 +84,91 @@
 			isa = PBXGroup;
 			children = (
 				B2005F80262BF07400133A0D /* SampleMVP */,
-				B2005F97262BF07800133A0D /* SampleMVPTests */,
-				B2005FA2262BF07800133A0D /* SampleMVPUITests */,
-				B2005F7F262BF07400133A0D /* Products */,
+				B2005FD1262BF35B00133A0D /* SampleMVP.app */,
 			);
-			sourceTree = "<group>";
-		};
-		B2005F7F262BF07400133A0D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B2005F7E262BF07400133A0D /* SampleMVP.app */,
-				B2005F94262BF07800133A0D /* SampleMVPTests.xctest */,
-				B2005F9F262BF07800133A0D /* SampleMVPUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		B2005F80262BF07400133A0D /* SampleMVP */ = {
 			isa = PBXGroup;
 			children = (
-				B2005F81262BF07400133A0D /* AppDelegate.swift */,
-				B2005F83262BF07400133A0D /* SceneDelegate.swift */,
-				B2005F85262BF07400133A0D /* ViewController.swift */,
-				B2005F87262BF07400133A0D /* Main.storyboard */,
-				B2005F8A262BF07800133A0D /* Assets.xcassets */,
+				B2005FBA262BF16800133A0D /* App */,
+				B2005FB6262BF0C400133A0D /* MVP */,
+				B2005FC1262BF18F00133A0D /* Utility */,
 				B2005F8C262BF07800133A0D /* LaunchScreen.storyboard */,
+				B2005F8A262BF07800133A0D /* Assets.xcassets */,
 				B2005F8F262BF07800133A0D /* Info.plist */,
 			);
 			path = SampleMVP;
 			sourceTree = "<group>";
 		};
-		B2005F97262BF07800133A0D /* SampleMVPTests */ = {
+		B2005FB6262BF0C400133A0D /* MVP */ = {
 			isa = PBXGroup;
 			children = (
-				B2005F98262BF07800133A0D /* SampleMVPTests.swift */,
-				B2005F9A262BF07800133A0D /* Info.plist */,
+				B2005FB9262BF0E700133A0D /* View */,
+				B2005FB8262BF0DA00133A0D /* Presenter */,
+				B2005FB7262BF0D100133A0D /* Model */,
 			);
-			path = SampleMVPTests;
+			path = MVP;
 			sourceTree = "<group>";
 		};
-		B2005FA2262BF07800133A0D /* SampleMVPUITests */ = {
+		B2005FB7262BF0D100133A0D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B2005FA3262BF07800133A0D /* SampleMVPUITests.swift */,
-				B2005FA5262BF07800133A0D /* Info.plist */,
+				B2005FD7262C03C000133A0D /* Repository.swift */,
 			);
-			path = SampleMVPUITests;
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B2005FB8262BF0DA00133A0D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B2005FE1262C0C7C00133A0D /* GitHubPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B2005FB9262BF0E700133A0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2005FC9262BF27B00133A0D /* Cell */,
+				B2005FC8262BF26C00133A0D /* VC */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B2005FBA262BF16800133A0D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B2005F81262BF07400133A0D /* AppDelegate.swift */,
+				B2005F83262BF07400133A0D /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B2005FC1262BF18F00133A0D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B2005FDC262C053C00133A0D /* GitHubAPI.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		B2005FC8262BF26C00133A0D /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				B2005F85262BF07400133A0D /* ViewController.swift */,
+				B2005F87262BF07400133A0D /* Main.storyboard */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		B2005FC9262BF27B00133A0D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B2005FCA262BF2E800133A0D /* RepoCell.swift */,
+				B2005FCB262BF2E800133A0D /* RepoCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +188,7 @@
 			);
 			name = SampleMVP;
 			productName = SampleMVP;
-			productReference = B2005F7E262BF07400133A0D /* SampleMVP.app */;
+			productReference = B2005FD1262BF35B00133A0D /* SampleMVP.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B2005F93262BF07800133A0D /* SampleMVPTests */ = {
@@ -163,7 +206,7 @@
 			);
 			name = SampleMVPTests;
 			productName = SampleMVPTests;
-			productReference = B2005F94262BF07800133A0D /* SampleMVPTests.xctest */;
+			productReference = B220FD942635DDC700DFB1E3 /* SampleMVPTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		B2005F9E262BF07800133A0D /* SampleMVPUITests */ = {
@@ -181,7 +224,7 @@
 			);
 			name = SampleMVPUITests;
 			productName = SampleMVPUITests;
-			productReference = B2005F9F262BF07800133A0D /* SampleMVPUITests.xctest */;
+			productReference = B220FD952635DDC700DFB1E3 /* SampleMVPUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -215,7 +258,7 @@
 				Base,
 			);
 			mainGroup = B2005F75262BF07400133A0D;
-			productRefGroup = B2005F7F262BF07400133A0D /* Products */;
+			productRefGroup = B2005F75262BF07400133A0D;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -234,6 +277,7 @@
 				B2005F8E262BF07800133A0D /* LaunchScreen.storyboard in Resources */,
 				B2005F8B262BF07800133A0D /* Assets.xcassets in Resources */,
 				B2005F89262BF07400133A0D /* Main.storyboard in Resources */,
+				B2005FCD262BF2E800133A0D /* RepoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2005FE2262C0C7C00133A0D /* GitHubPresenter.swift in Sources */,
 				B2005F86262BF07400133A0D /* ViewController.swift in Sources */,
+				B2005FDD262C053C00133A0D /* GitHubAPI.swift in Sources */,
 				B2005F82262BF07400133A0D /* AppDelegate.swift in Sources */,
+				B2005FD8262C03C000133A0D /* Repository.swift in Sources */,
 				B2005F84262BF07400133A0D /* SceneDelegate.swift in Sources */,
+				B2005FCC262BF2E800133A0D /* RepoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +316,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2005F99262BF07800133A0D /* SampleMVPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +323,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2005FA4262BF07800133A0D /* SampleMVPUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
