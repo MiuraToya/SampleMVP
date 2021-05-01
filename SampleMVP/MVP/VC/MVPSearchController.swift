@@ -18,6 +18,7 @@ class MVPSearchController: UIViewController {
             tableView.delegate = self
         }
     }
+    @IBOutlet weak var searchText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,10 @@ class MVPSearchController: UIViewController {
         print("yobareta")
         self.presenter = presenter
         print("")
+    }
+    @IBAction func search(_ sender: Any) {
+        guard let searchText = searchText.text else { return }
+        presenter.search(with: searchText)
     }
 }
 

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B2005F82262BF07400133A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005F81262BF07400133A0D /* AppDelegate.swift */; };
-		B2005F84262BF07400133A0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005F83262BF07400133A0D /* SceneDelegate.swift */; };
 		B2005F86262BF07400133A0D /* MVPSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005F85262BF07400133A0D /* MVPSearchController.swift */; };
 		B2005F89262BF07400133A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2005F87262BF07400133A0D /* Main.storyboard */; };
 		B2005F8B262BF07800133A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2005F8A262BF07800133A0D /* Assets.xcassets */; };
@@ -43,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		B2005F81262BF07400133A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2005F83262BF07400133A0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B2005F85262BF07400133A0D /* MVPSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPSearchController.swift; sourceTree = "<group>"; };
 		B2005F88262BF07400133A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2005F8A262BF07800133A0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,9 +56,9 @@
 		B220FDBC2637183400DFB1E3 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B220FDC42637184D00DFB1E3 /* Web.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
 		B220FDCB2637377D00DFB1E3 /* WebPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPresenter.swift; sourceTree = "<group>"; };
-		B2766D21263D07C800ABC5D5 /* SampleMVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SampleMVPTests.xctest; path = "/Users/toya/Desktop/SampleMVP/SampleMVP/build/Debug-iphoneos/SampleMVPTests.xctest"; sourceTree = "<absolute>"; };
-		B2766D22263D07C800ABC5D5 /* SampleMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SampleMVPUITests.xctest; path = "/Users/toya/Desktop/SampleMVP/SampleMVP/build/Debug-iphoneos/SampleMVPUITests.xctest"; sourceTree = "<absolute>"; };
 		B2766D23263D112300ABC5D5 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B2766D39263D30B700ABC5D5 /* SampleMVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SampleMVPTests.xctest; path = "/Users/toya/Desktop/SampleMVP/SampleMVP/build/Debug-iphoneos/SampleMVPTests.xctest"; sourceTree = "<absolute>"; };
+		B2766D3A263D30B700ABC5D5 /* SampleMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SampleMVPUITests.xctest; path = "/Users/toya/Desktop/SampleMVP/SampleMVP/build/Debug-iphoneos/SampleMVPUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				B2005F81262BF07400133A0D /* AppDelegate.swift */,
-				B2005F83262BF07400133A0D /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -226,7 +223,7 @@
 			);
 			name = SampleMVPTests;
 			productName = SampleMVPTests;
-			productReference = B2766D21263D07C800ABC5D5 /* SampleMVPTests.xctest */;
+			productReference = B2766D39263D30B700ABC5D5 /* SampleMVPTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		B2005F9E262BF07800133A0D /* SampleMVPUITests */ = {
@@ -244,7 +241,7 @@
 			);
 			name = SampleMVPUITests;
 			productName = SampleMVPUITests;
-			productReference = B2766D22263D07C800ABC5D5 /* SampleMVPUITests.xctest */;
+			productReference = B2766D3A263D30B700ABC5D5 /* SampleMVPUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -329,7 +326,6 @@
 				B2005FDD262C053C00133A0D /* GitHubAPI.swift in Sources */,
 				B2005F82262BF07400133A0D /* AppDelegate.swift in Sources */,
 				B2005FD8262C03C000133A0D /* Repository.swift in Sources */,
-				B2005F84262BF07400133A0D /* SceneDelegate.swift in Sources */,
 				B220FDCC2637377D00DFB1E3 /* WebPresenter.swift in Sources */,
 				B2005FCC262BF2E800133A0D /* RepoCell.swift in Sources */,
 				B220FDBD2637183400DFB1E3 /* WebViewController.swift in Sources */,
@@ -509,6 +505,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JBN38UMB62;
 				INFOPLIST_FILE = SampleMVP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -528,6 +525,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JBN38UMB62;
 				INFOPLIST_FILE = SampleMVP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
