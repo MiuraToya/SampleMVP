@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B2005F82262BF07400133A0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005F81262BF07400133A0D /* AppDelegate.swift */; };
 		B2005F84262BF07400133A0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005F83262BF07400133A0D /* SceneDelegate.swift */; };
-		B2005F86262BF07400133A0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005F85262BF07400133A0D /* ViewController.swift */; };
+		B2005F86262BF07400133A0D /* MVPSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005F85262BF07400133A0D /* MVPSearchController.swift */; };
 		B2005F89262BF07400133A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2005F87262BF07400133A0D /* Main.storyboard */; };
 		B2005F8B262BF07800133A0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2005F8A262BF07800133A0D /* Assets.xcassets */; };
 		B2005F8E262BF07800133A0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2005F8C262BF07800133A0D /* LaunchScreen.storyboard */; };
@@ -19,8 +19,9 @@
 		B2005FDD262C053C00133A0D /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005FDC262C053C00133A0D /* GitHubAPI.swift */; };
 		B2005FE2262C0C7C00133A0D /* GitHubPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2005FE1262C0C7C00133A0D /* GitHubPresenter.swift */; };
 		B220FDBD2637183400DFB1E3 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B220FDBC2637183400DFB1E3 /* WebViewController.swift */; };
-		B220FDC52637184D00DFB1E3 /* WebViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B220FDC42637184D00DFB1E3 /* WebViewController.storyboard */; };
+		B220FDC52637184D00DFB1E3 /* Web.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B220FDC42637184D00DFB1E3 /* Web.storyboard */; };
 		B220FDCC2637377D00DFB1E3 /* WebPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B220FDCB2637377D00DFB1E3 /* WebPresenter.swift */; };
+		B2766D24263D112300ABC5D5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2766D23263D112300ABC5D5 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,7 @@
 /* Begin PBXFileReference section */
 		B2005F81262BF07400133A0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2005F83262BF07400133A0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B2005F85262BF07400133A0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2005F85262BF07400133A0D /* MVPSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPSearchController.swift; sourceTree = "<group>"; };
 		B2005F88262BF07400133A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2005F8A262BF07800133A0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2005F8D262BF07800133A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,10 +56,11 @@
 		B2005FDC262C053C00133A0D /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		B2005FE1262C0C7C00133A0D /* GitHubPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubPresenter.swift; sourceTree = "<group>"; };
 		B220FDBC2637183400DFB1E3 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		B220FDC42637184D00DFB1E3 /* WebViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebViewController.storyboard; sourceTree = "<group>"; };
-		B220FDC92637374300DFB1E3 /* SampleMVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SampleMVPTests.xctest; path = "/Users/toya/Desktop/SampleMVP/SampleMVP/build/Debug-iphoneos/SampleMVPTests.xctest"; sourceTree = "<absolute>"; };
-		B220FDCA2637374300DFB1E3 /* SampleMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SampleMVPUITests.xctest; path = "/Users/toya/Desktop/SampleMVP/SampleMVP/build/Debug-iphoneos/SampleMVPUITests.xctest"; sourceTree = "<absolute>"; };
+		B220FDC42637184D00DFB1E3 /* Web.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Web.storyboard; sourceTree = "<group>"; };
 		B220FDCB2637377D00DFB1E3 /* WebPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPresenter.swift; sourceTree = "<group>"; };
+		B2766D21263D07C800ABC5D5 /* SampleMVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SampleMVPTests.xctest; path = "/Users/toya/Desktop/SampleMVP/SampleMVP/build/Debug-iphoneos/SampleMVPTests.xctest"; sourceTree = "<absolute>"; };
+		B2766D22263D07C800ABC5D5 /* SampleMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SampleMVPUITests.xctest; path = "/Users/toya/Desktop/SampleMVP/SampleMVP/build/Debug-iphoneos/SampleMVPUITests.xctest"; sourceTree = "<absolute>"; };
+		B2766D23263D112300ABC5D5 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				B2005FDC262C053C00133A0D /* GitHubAPI.swift */,
+				B2766D23263D112300ABC5D5 /* Router.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -163,7 +166,7 @@
 		B2005FC8262BF26C00133A0D /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				B2005F85262BF07400133A0D /* ViewController.swift */,
+				B2005F85262BF07400133A0D /* MVPSearchController.swift */,
 				B2005F87262BF07400133A0D /* Main.storyboard */,
 			);
 			path = VC;
@@ -183,7 +186,7 @@
 			children = (
 				B220FDBC2637183400DFB1E3 /* WebViewController.swift */,
 				B220FDCB2637377D00DFB1E3 /* WebPresenter.swift */,
-				B220FDC42637184D00DFB1E3 /* WebViewController.storyboard */,
+				B220FDC42637184D00DFB1E3 /* Web.storyboard */,
 			);
 			path = Web;
 			sourceTree = "<group>";
@@ -223,7 +226,7 @@
 			);
 			name = SampleMVPTests;
 			productName = SampleMVPTests;
-			productReference = B220FDC92637374300DFB1E3 /* SampleMVPTests.xctest */;
+			productReference = B2766D21263D07C800ABC5D5 /* SampleMVPTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		B2005F9E262BF07800133A0D /* SampleMVPUITests */ = {
@@ -241,7 +244,7 @@
 			);
 			name = SampleMVPUITests;
 			productName = SampleMVPUITests;
-			productReference = B220FDCA2637374300DFB1E3 /* SampleMVPUITests.xctest */;
+			productReference = B2766D22263D07C800ABC5D5 /* SampleMVPUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -295,7 +298,7 @@
 				B2005F8B262BF07800133A0D /* Assets.xcassets in Resources */,
 				B2005F89262BF07400133A0D /* Main.storyboard in Resources */,
 				B2005FCD262BF2E800133A0D /* RepoCell.xib in Resources */,
-				B220FDC52637184D00DFB1E3 /* WebViewController.storyboard in Resources */,
+				B220FDC52637184D00DFB1E3 /* Web.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +324,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2005FE2262C0C7C00133A0D /* GitHubPresenter.swift in Sources */,
-				B2005F86262BF07400133A0D /* ViewController.swift in Sources */,
+				B2005F86262BF07400133A0D /* MVPSearchController.swift in Sources */,
+				B2766D24263D112300ABC5D5 /* Router.swift in Sources */,
 				B2005FDD262C053C00133A0D /* GitHubAPI.swift in Sources */,
 				B2005F82262BF07400133A0D /* AppDelegate.swift in Sources */,
 				B2005FD8262C03C000133A0D /* Repository.swift in Sources */,

@@ -11,7 +11,7 @@
         <!--Web View Controller-->
         <scene sceneID="494-65-xqB">
             <objects>
-                <viewController id="w9W-az-vrh" customClass="WebViewController" customModule="SampleMVP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier=" Web" id="w9W-az-vrh" customClass="WebViewController" customModule="SampleMVP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J7C-ZU-nhj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
