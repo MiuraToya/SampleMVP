@@ -7,10 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    // Presenterのインスタンスを保持
-    private var presenter: GitHubPresenter!
+class MVPSearchController: UIViewController {
     
     private var indicator = UIActivityIndicatorView()
    
@@ -18,22 +15,36 @@ class ViewController: UIViewController {
         didSet {
             tableView.register(UINib(nibName: "RepoCell", bundle: nil), forCellReuseIdentifier: "RepoCell")
             tableView.dataSource = self
+            tableView.delegate = self
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.isHidden = true
+        indicator.isHidden = true
+        print("viewdid\(self.presenter)")
     }
     
-    func inject(presenter: GitHubPresenter) {
+    // Presenterのインスタンスを保持
+    var presenter: GitHubPresenterInput!
+    func inject(presenter: GitHubPresenterInput) {
+        print("yobareta")
         self.presenter = presenter
+        print("")
     }
 }
 
+extension MVPSearchController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.selected(index: indexPath.row)
+    }
+}
 
-extension ViewController: UITableViewDataSource {
+extension MVPSearchController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter.numberOfItems
+        print("テストPRE \(self.presenter)")
+        return presenter.numberOfItems
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,14 +58,14 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: GitHubPresenterOutput {
+extension MVPSearchController: GitHubPresenterOutput {
     func upDataRepsitory(_ repository: [Repository]) {
         tableView.reloadData()
     }
     
     func upData(load: Bool) {
         tableView.isHidden = load
-        indicator.isHidden = load
+        indicator.isHidden = !load
     }
     
     func get(error: Error) {
@@ -62,7 +73,7 @@ extension ViewController: GitHubPresenterOutput {
     }
     
     func showWeb(Repositoly: Repository) {
-        <#code#>
+        Router.shared.showWeb(from: self, repositoly: Repositoly)
     }
     
     

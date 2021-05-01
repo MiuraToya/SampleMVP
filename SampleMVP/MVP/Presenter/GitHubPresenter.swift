@@ -31,10 +31,10 @@ class GitHubPresenter {
     
     private var repositoly: [Repository]
     
-    init(output: GitHubPresenterOutput, api: GitHubAPIProtocol, repositoly: [Repository]) {
+    init(output: GitHubPresenterOutput, api: GitHubAPIProtocol = GitHubAPI.shared, repositoly: [Repository] = []) {
         self.output = output
-        self.api = GitHubAPI.shared
-        self.repositoly = []
+        self.api = api
+        self.repositoly = repositoly
     }
 }
 
