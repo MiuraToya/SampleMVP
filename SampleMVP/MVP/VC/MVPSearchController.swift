@@ -7,10 +7,10 @@
 
 import UIKit
 
-class MVPSearchController: UIViewController {
+final class MVPSearchController: UIViewController {
     
-    private var indicator = UIActivityIndicatorView()
-   
+    @IBOutlet private weak var indicator: UIActivityIndicatorView!
+    
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableView.register(UINib(nibName: "RepoCell", bundle: nil), forCellReuseIdentifier: "RepoCell")
@@ -24,15 +24,12 @@ class MVPSearchController: UIViewController {
         super.viewDidLoad()
         tableView.isHidden = true
         indicator.isHidden = true
-        print("viewdid\(self.presenter)")
     }
     
     // Presenterのインスタンスを保持
     var presenter: GitHubPresenterInput!
     func inject(presenter: GitHubPresenterInput) {
-        print("yobareta")
         self.presenter = presenter
-        print("")
     }
     @IBAction func search(_ sender: Any) {
         guard let searchText = searchText.text else { return }
@@ -48,7 +45,6 @@ extension MVPSearchController: UITableViewDelegate {
 
 extension MVPSearchController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("テストPRE \(self.presenter)")
         return presenter.numberOfItems
     }
     
@@ -65,12 +61,16 @@ extension MVPSearchController: UITableViewDataSource {
 
 extension MVPSearchController: GitHubPresenterOutput {
     func upDataRepsitory(_ repository: [Repository]) {
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func upData(load: Bool) {
-        tableView.isHidden = load
-        indicator.isHidden = !load
+        DispatchQueue.main.async {
+            self.tableView.isHidden = load
+            self.indicator.isHidden = !load
+        }
     }
     
     func get(error: Error) {
@@ -78,7 +78,9 @@ extension MVPSearchController: GitHubPresenterOutput {
     }
     
     func showWeb(Repositoly: Repository) {
-        Router.shared.showWeb(from: self, repositoly: Repositoly)
+        DispatchQueue.main.async {
+            Router.shared.showWeb(from: self, repositoly: Repositoly)
+        }
     }
     
     

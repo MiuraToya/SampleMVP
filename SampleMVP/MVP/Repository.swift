@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct Item: Codable {
+    let items: [Repository]?
+}
+
 struct Repository: Codable {
     let fullName: String
     var urlStr: String {

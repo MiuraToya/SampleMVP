@@ -21,6 +21,13 @@
                                 <rect key="frame" x="0.0" y="103" width="414" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ePN-1m-742">
+                                <rect key="frame" x="182" y="423" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ZIc-iK-nXj"/>
+                                    <constraint firstAttribute="height" constant="50" id="mAt-dL-4Oi"/>
+                                </constraints>
+                            </activityIndicatorView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="guf-Ks-xnr">
                                 <rect key="frame" x="40" y="54" width="250" height="34"/>
                                 <constraints>
@@ -44,13 +51,16 @@
                             <constraint firstItem="guf-Ks-xnr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="J0e-41-1Mo"/>
                             <constraint firstItem="guf-Ks-xnr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="KDM-db-fB4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZHe-Ha-ClT" secondAttribute="bottom" id="Mva-Dl-SDH"/>
+                            <constraint firstItem="ePN-1m-742" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NIz-My-BG9"/>
                             <constraint firstItem="NI6-4J-ovI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="X13-VG-kDp"/>
+                            <constraint firstItem="ePN-1m-742" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZUc-jW-R44"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZHe-Ha-ClT" secondAttribute="trailing" id="heH-io-hob"/>
                             <constraint firstItem="ZHe-Ha-ClT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mTb-k0-8G0"/>
                             <constraint firstItem="ZHe-Ha-ClT" firstAttribute="top" secondItem="guf-Ks-xnr" secondAttribute="bottom" constant="15" id="oeC-pZ-f67"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="indicator" destination="ePN-1m-742" id="zvG-92-GYs"/>
                         <outlet property="searchText" destination="guf-Ks-xnr" id="4ik-tf-Jt7"/>
                         <outlet property="tableView" destination="ZHe-Ha-ClT" id="0ta-LE-91X"/>
                     </connections>

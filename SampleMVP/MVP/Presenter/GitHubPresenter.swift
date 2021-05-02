@@ -63,6 +63,7 @@ extension GitHubPresenter: GitHubPresenterInput {
             switch result {
             case .success(let repositoly):
                 self?.repositoly = repositoly
+                self?.output.upDataRepsitory(repositoly)
             case .failure(let error):
                 self?.output.get(error: error)
             }

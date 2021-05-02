@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController {
+final class WebViewController: UIViewController {
     
     @IBOutlet weak var webView: UIWebView!
     // presenterのインスタンスを保持
@@ -27,6 +27,8 @@ class WebViewController: UIViewController {
 
 extension WebViewController: WebPresenterOutput {
     func load(request: URLRequest) {
-        self.webView.loadRequest(request)
+        DispatchQueue.main.async {
+            self.webView.loadRequest(request)
+        }
     }
 }
