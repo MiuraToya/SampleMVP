@@ -10,7 +10,7 @@ import WebKit
 
 final class WebViewController: UIViewController {
     
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet private weak var webView: UIWebView!
     // presenterのインスタンスを保持
     private var presenter: WebPresenter!
     
