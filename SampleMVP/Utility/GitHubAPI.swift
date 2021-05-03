@@ -24,9 +24,9 @@ final  class GitHubAPI: GitHubAPIProtocol {
             completion?(.failure(.error))
             return
         }
-    
+        
         guard let url = URL(string: "https://api.github.com/search/repositories?q=\(searchWord)&sort=stars") else { return }
-   
+        
         // API通信
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data else { return }

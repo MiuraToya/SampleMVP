@@ -10,7 +10,6 @@ import UIKit
 final class MVPSearchController: UIViewController {
     
     @IBOutlet private weak var indicator: UIActivityIndicatorView!
-    
     @IBOutlet private weak var tableView: UITableView! {
         didSet {
             tableView.register(UINib(nibName: "RepoCell", bundle: nil), forCellReuseIdentifier: "RepoCell")
@@ -18,7 +17,7 @@ final class MVPSearchController: UIViewController {
             tableView.delegate = self
         }
     }
-    @IBOutlet weak var searchText: UITextField!
+    @IBOutlet private weak var searchText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,24 +26,31 @@ final class MVPSearchController: UIViewController {
     }
     
     // Presenterのインスタンスを保持
-    var presenter: GitHubPresenterInput!
+    private var presenter: GitHubPresenterInput!
+    // Routerに繋いでもらう処理がある
     func inject(presenter: GitHubPresenterInput) {
+        // Presenterと繋がる
         self.presenter = presenter
     }
+   
+    // 検索ボタンタップ
     @IBAction func search(_ sender: Any) {
         guard let searchText = searchText.text else { return }
+        // Presenterに通知
         presenter.search(with: searchText)
     }
 }
 
 extension MVPSearchController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Presenterに通知
         presenter.selected(index: indexPath.row)
     }
 }
 
 extension MVPSearchController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Presenterに通知
         return presenter.numberOfItems
     }
     
@@ -82,6 +88,4 @@ extension MVPSearchController: GitHubPresenterOutput {
             Router.shared.showWeb(from: self, repositoly: Repositoly)
         }
     }
-    
-    
 }

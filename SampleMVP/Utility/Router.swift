@@ -17,7 +17,7 @@ final class Router {
         // vcとpresenterを参照させ合う(presenterは弱参照でvcを保持)
         let presenter = GitHubPresenter(output: vc)
         vc.inject(presenter: presenter)
-       
+        
         let nav = UINavigationController(rootViewController: vc)
         window.rootViewController = nav
         window.makeKeyAndVisible()

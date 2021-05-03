@@ -41,13 +41,13 @@ class GitHubPresenter {
 // PresenterはInputを受けてOutputするイメージ(外から通知を受けて外に通知を出す)
 // outputが具体的に何をしてるかは知らなくても良い
 extension GitHubPresenter: GitHubPresenterInput {
-    // 数を数えて！
+    // 数を数えて！という通知に対して
     var numberOfItems: Int { return repositoly.count }
-    // 指定されたindexのレポジトリを教えて！
+    // 指定されたindexのレポジトリを教えて！という通知に対して
     func getRepo(index: Int) -> Repository {
         return repositoly[index]
     }
-    // 指定されたindexのレポジトリが選択された！
+    // 指定されたindexのレポジトリが選択された！という通知に対して
     // webを開く通知をする
     func selected(index: Int) {
         self.output.showWeb(Repositoly: repositoly[index])
@@ -60,6 +60,7 @@ extension GitHubPresenter: GitHubPresenterInput {
         self.api.getRepository(searchWord: text) { [weak self] result in
             // ロード終了を通知
             self?.output.upData(load: false)
+            // モデルを操作してViewに結果を渡す
             switch result {
             case .success(let repositoly):
                 self?.repositoly = repositoly
