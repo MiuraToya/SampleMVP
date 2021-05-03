@@ -24,7 +24,7 @@ protocol GitHubPresenterOutput: AnyObject {
 }
 
 class GitHubPresenter {
-    // アクションを加えるプロトコルに準拠したインスタンスを保持
+    // アクションを加えるプロトコルに準拠したインスタンスを保持(View)
     private weak var output: GitHubPresenterOutput!
     // API通信用に準拠したインスタンスを取得
     private var api: GitHubAPIProtocol

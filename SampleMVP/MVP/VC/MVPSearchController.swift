@@ -25,7 +25,7 @@ final class MVPSearchController: UIViewController {
         indicator.isHidden = true
     }
     
-    // Presenterのインスタンスを保持
+    // Presenterのインスタンスを保持(強参照)
     private var presenter: GitHubPresenterInput!
     // Routerに繋いでもらう処理がある
     func inject(presenter: GitHubPresenterInput) {
